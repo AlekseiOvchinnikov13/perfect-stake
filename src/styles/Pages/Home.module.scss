@@ -1,0 +1,42 @@
+@import '../variables.module';
+
+.pageWrapper {
+  .description {
+    text-transform: uppercase;
+    color: $ALMOST_WHITE_FONT_COLOR;
+    font-size: .0128em;
+    max-width: 50vw;
+    margin: 0 auto;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      bottom: -2.5em;
+      right: -1em;
+      width: 23.5em;
+      height: 8.3em;
+
+      background-color: $LIGHT_BACKGROUND_COLOR;
+      border-radius: 27px;
+    }
+  }
+
+  .section {
+    padding: .035em 0;
+  }
+
+  .homeSection {
+    padding-top: .11em;
+
+    .projectCardWrapper {
+      max-width: 100%;
+      width: 100%;
+      padding-top: .05em;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(.1778em, 1fr));
+      gap: .035em;
+    }
+  }
+}

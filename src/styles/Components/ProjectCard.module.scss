@@ -1,0 +1,92 @@
+@import '../variables.module';
+
+.projectCard {
+  width: .178em;
+  height: .25em;
+
+  background-color: $LIGHT_BACKGROUND_COLOR;
+  border-radius: 30px;
+  padding: .035em .025em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .projectTitle, .apyText, .apyNumber, .stakeButton {
+    color: $ALMOST_WHITE_FONT_COLOR;
+  }
+
+  .projectHeader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+
+    .projectImgWrapper {
+      width: .03928em;
+      height: .03928em;
+
+      .projectImg {
+        border-radius: 50%;
+      }
+    }
+
+    .projectTitle {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: .0128em;
+      background-color: $GREY_BACKGROUND_COLOR;
+      border-radius: 24px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      width: 9.7em;
+      height: 3.1em;
+      left: 25%;
+      z-index: -1;
+    }
+  }
+
+  .apyWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .apyText {
+      font-size: .0085em;
+    }
+
+    .apyNumber {
+      font-size: .017em;
+      font-weight: 600;
+      margin-top: 1.14em;
+    }
+  }
+
+  .stakeButton {
+    font-size: .01em;
+    border-radius: 20px;
+    background: $LEFT_BACKGROUND_GRADIENT;
+    height: 2.5em;
+    width: 7.92em;
+    text-transform: capitalize;
+    font-family: $FONT_FAMILY_JOST;
+    font-weight: 700;
+    border: 0;
+
+    transition: all .3s ease-in-out;
+
+    &:hover, &:focus {
+      background:  transparent;
+      border: 1px solid $ACCENT_ORANGE_COLOR;
+      color: $ACCENT_ORANGE_COLOR;
+    }
+  }
+}

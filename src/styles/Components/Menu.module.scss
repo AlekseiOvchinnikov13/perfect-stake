@@ -1,0 +1,33 @@
+@import '../variables.module';
+
+.menu {
+  margin: 0;
+  font-size: .015em;
+
+  .menuList {
+    display: flex;
+    align-items: center;
+
+    .menuItem {
+      .menuLink {
+        font-weight: 500;
+        color: $ACCENT_ORANGE_COLOR;
+        text-transform: capitalize;
+        max-width: 9em;
+        transition: color .3ms ease-in-out;
+
+        &:hover {
+          color: $ALMOST_WHITE_FONT_COLOR;
+        }
+      }
+
+      .menuLink_active {
+        color: $ALMOST_WHITE_FONT_COLOR;
+      }
+    }
+
+    .menuItem + .menuItem {
+      margin-left: 1.81em;
+    }
+  }
+}

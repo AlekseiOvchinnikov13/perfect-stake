@@ -1,0 +1,11 @@
+.loader {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  div, svg {
+    position: absolute;
+  }
+}

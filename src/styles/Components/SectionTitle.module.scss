@@ -1,0 +1,26 @@
+@import '../variables.module';
+
+.title {
+  font-size: .028em;
+  font-weight: 500;
+  color: $ALMOST_WHITE_FONT_COLOR;
+
+}
+
+.titleRight {
+  text-align: right;
+  position: relative;
+  padding-right: 7%;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -2.34em;
+    z-index: -1;
+    width: 40%;
+    height: .875em;
+    background: $RIGHT_BACkGROUND_GRADIENT;
+    border-radius: 10px 0 0 10px;
+  }
+}

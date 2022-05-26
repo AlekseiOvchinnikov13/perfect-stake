@@ -1,0 +1,19 @@
+@import '../variables.module';
+
+.header {
+  margin: .03em 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -5;
+    height: .28em;
+    background: linear-gradient(180deg, $SECONDARY_BACKGROUND_GRADIENT_COLOR 42.36%, $PRIMARY_BACKGROUND_COLOR 98.31%);
+  }
+}
