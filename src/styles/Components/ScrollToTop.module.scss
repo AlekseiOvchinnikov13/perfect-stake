@@ -1,0 +1,45 @@
+@import '../variables.module';
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 80%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.circleToTop {
+  position: fixed;
+  right: 7em;
+  bottom: 4em;
+  border-radius: 50%;
+  border: 2px solid $BUTTON_TO_TOP_COLOR;
+  width: 3.8em;
+  height: 3.8em;
+  background: transparent;
+  animation: fadeInUp 2.7s ease-in-out infinite;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 48%;
+    height: 3px;
+    width: 14px;
+    background-color: $BUTTON_TO_TOP_COLOR;
+    border-radius: 3px;
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+    right: 45%;
+  }
+
+  &:after {
+    transform: rotate(45deg);
+    left: 45%;
+  }
+}

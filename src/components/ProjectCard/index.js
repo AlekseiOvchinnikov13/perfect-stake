@@ -1,9 +1,9 @@
-import styles from '../../styles/Components/ProjectCard.module.scss';
 import Image from 'next/image';
 import {useEffect, useState} from 'react';
 import {COINS_DATA} from '../../data/coins';
+import styles from '../../styles/Components/ProjectCard.module.scss';
 
-const ProjectCard = ({project}) => {
+const ProjectCard = ({project, onClick}) => {
   const [projectData, setProjectData] = useState(null);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const ProjectCard = ({project}) => {
             : 'soon'}
         </span>
       </div>
-      <button className={styles.stakeButton}>stake now</button>
+      <button onClick={onClick} className={`${styles.stakeButton} stake-button-view`}>stake now</button>
     </div>
   );
 };

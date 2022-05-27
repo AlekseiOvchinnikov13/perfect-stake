@@ -28,8 +28,10 @@
   }
 
   .homeSection {
-    padding-top: .11em;
+    padding-bottom: .07em;
+  }
 
+  .projectSection {
     .projectCardWrapper {
       max-width: 100%;
       width: 100%;
@@ -38,5 +40,23 @@
       grid-template-columns: repeat(auto-fill, minmax(.1778em, 1fr));
       gap: .035em;
     }
+  }
+
+  .calculatorSection {
+    .stakeButton {
+      font-size: .0185em;
+      width: 9.6em;
+      height: 2.3em;
+      border-radius: 30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2.69em auto 0;
+    }
+  }
+
+  .issSection {
+
   }
 }

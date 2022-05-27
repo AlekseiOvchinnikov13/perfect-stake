@@ -1,0 +1,31 @@
+@import '../variables.module';
+
+.contactsWrapper {
+  padding-top: .0428em;
+
+  .contactRow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all .3s ease-in-out;
+
+    .text {
+      font-size: .0128em;
+      padding-left: .5em;
+      color: $ALMOST_WHITE_FONT_COLOR;
+
+    }
+
+    &:hover, &:focus {
+      transform: scale(1.01);
+
+      .text {
+        text-decoration: $ALMOST_WHITE_FONT_COLOR underline;
+      }
+    }
+  }
+
+  .contactRow + .contactRow {
+    margin-top: .0178em;
+  }
+}

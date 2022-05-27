@@ -5,22 +5,50 @@
   font-weight: 500;
   color: $ALMOST_WHITE_FONT_COLOR;
 
-}
-
-.titleRight {
-  text-align: right;
   position: relative;
+  text-align: right;
   padding-right: 7%;
 
   &:before {
     content: '';
     position: absolute;
+    z-index: -1;
     top: 0;
     right: -2.34em;
-    z-index: -1;
     width: 40%;
     height: .875em;
-    background: $RIGHT_BACkGROUND_GRADIENT;
     border-radius: 10px 0 0 10px;
+  }
+}
+
+.titleLeft {
+  text-align: left;
+  padding-left: 10%;
+
+  &:before {
+    left: -2.34em;
+    width: 30%;
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+.backgroundColorDefault {
+  &:before {
+    background: $DARK_BACKGROUND_GRADIENT;
+  }
+}
+
+.backgroundColorLight {
+  &:before {
+    background: $LIGHT_BACKGROUND_GRADIENT;
+  }
+}
+
+.titleContact {
+  padding-right: 10%;
+
+  &:before {
+    width: 27%;
+    background: $CONTACT_LIGHT_BACKGROUND_GRADIENT;
   }
 }

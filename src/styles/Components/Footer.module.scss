@@ -1,9 +1,22 @@
 @import '../variables.module';
 
 .footer {
+  padding-bottom: .05em;
+
   p {
     text-transform: capitalize;
     font-size: .018em;
     color: $FOOTER_FONT_COLOR;
+  }
+
+  .gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -5;
+    width: 100%;
+    height: .227em;
+    background: linear-gradient(180deg, $PRIMARY_BACKGROUND_COLOR 30.98%, $SECONDARY_BACKGROUND_GRADIENT_COLOR 87%);
   }
 }

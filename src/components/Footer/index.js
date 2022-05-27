@@ -7,6 +7,7 @@ const Footer = () => {
 
   return (
     <footer className={classes}>
+      <div className={styles.gradient}/>
       <p>perfect stake &copy;&nbsp;2019-{currentYear}</p>
     </footer>
   );

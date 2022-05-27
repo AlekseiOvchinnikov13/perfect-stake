@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: space-between;
 
-  .projectTitle, .apyText, .apyNumber, .stakeButton {
+  .projectTitle, .apyText, .apyNumber {
     color: $ALMOST_WHITE_FONT_COLOR;
   }
 
@@ -72,21 +72,7 @@
 
   .stakeButton {
     font-size: .01em;
-    border-radius: 20px;
-    background: $LEFT_BACKGROUND_GRADIENT;
     height: 2.5em;
     width: 7.92em;
-    text-transform: capitalize;
-    font-family: $FONT_FAMILY_JOST;
-    font-weight: 700;
-    border: 0;
-
-    transition: all .3s ease-in-out;
-
-    &:hover, &:focus {
-      background:  transparent;
-      border: 1px solid $ACCENT_ORANGE_COLOR;
-      color: $ACCENT_ORANGE_COLOR;
-    }
   }
 }

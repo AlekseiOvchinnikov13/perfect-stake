@@ -2,8 +2,9 @@ import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
 import styles from '../../styles/Components/Layout.module.scss';
-import {useLayoutEffect, useState} from 'react';
+import {useEffect, useLayoutEffect, useState} from 'react';
 import {isBrowser} from '../../utils';
+import ScrollToTop from '../ScrollToTop';
 
 const Layout = ({children}) => {
   const [, setSize] = useState([0, 0]);
@@ -13,6 +14,14 @@ const Layout = ({children}) => {
     isBrowser && window.addEventListener('resize', updateSize);
     updateSize();
     return () => isBrowser && window.removeEventListener('resize', updateSize);
+  }, []);
+
+  const [visible, setVisible] = useState(false);
+  const onScroll = () => isBrowser && setVisible(window.scrollY > 0);
+
+  useEffect(() => {
+    isBrowser && document.addEventListener('scroll', onScroll);
+    return () => isBrowser && document.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
@@ -34,6 +43,7 @@ const Layout = ({children}) => {
       <Header/>
       <main className={styles.layout}>{children}</main>
       <Footer/>
+      {visible && <ScrollToTop/>}
     </>
   );
 };

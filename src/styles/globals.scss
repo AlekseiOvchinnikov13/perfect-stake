@@ -2,51 +2,69 @@
 @import 'variables.module';
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body, html {
-    margin: 0;
-    position: relative;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+  margin: 0;
+  position: relative;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-    height: 100%;
-    min-height: 100vh;
-    min-width: 320px;
-    max-width: 1920px;
-    margin: 0 auto;
-    font-family: $FONT_FAMILY_JOST;
-    font-size: 100vw;
-    background-color: $PRIMARY_BACKGROUND_COLOR;
+  height: 100%;
+  min-height: 100vh;
+  min-width: 320px;
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: $FONT_FAMILY_JOST;
+  font-size: 100vw;
+  background-color: $PRIMARY_BACKGROUND_COLOR;
 }
 
 h1, h2, h3, h4, h5, h6, a, p, ul, ol, li, div, span, button {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    display: inline-block;
-    text-decoration: none;
+  display: inline-block;
+  text-decoration: none;
 }
 
 ul, li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a, button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .container {
-    padding: 0 .065em;
+  padding: 0 .065em;
+}
+
+.stake-button-view {
+  border-radius: 20px;
+  background: $LIGHT_BACKGROUND_GRADIENT;
+  text-transform: capitalize;
+  font-family: $FONT_FAMILY_JOST;
+  font-weight: 700;
+  color: $ALMOST_WHITE_FONT_COLOR;
+  border: none;
+
+  transition: all .3s ease-in-out;
+
+  &:hover, &:focus {
+    background: transparent;
+    border: 1px solid $ACCENT_ORANGE_COLOR;
+    color: $ACCENT_ORANGE_COLOR;
+  }
 }
