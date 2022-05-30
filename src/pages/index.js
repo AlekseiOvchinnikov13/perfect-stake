@@ -4,6 +4,8 @@ import {getCoinsMarkets} from './api/api';
 import ProjectCard from '../components/ProjectCard';
 import Loader from '../components/Loader';
 import Contacts from '../components/Contacts';
+import Accordion from '../components/Accordion';
+import {ISS_DATA} from '../data/ISS';
 
 const Home = ({projects}) => {
 
@@ -33,7 +35,15 @@ const Home = ({projects}) => {
       </section>
       <section className={`${styles.section} ${styles.issSection}`} id="infrastructure-security-statement">
         <SectionTitle label="Infrastructure & Security Statement"/>
-        
+        <div className={styles.accordionWrapper}>
+          {ISS_DATA.map(item =>
+            <Accordion
+              key={item.title}
+              data={item}
+              isHome
+            />
+          )}
+        </div>
       </section>
       <section className={`${styles.section} ${styles.contactSection}`} id="contact">
         <SectionTitle label="Contacts" isLight isContact/>
