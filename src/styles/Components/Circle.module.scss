@@ -1,0 +1,120 @@
+@import '../variables.module';
+
+.default {
+  position: absolute;
+  background-color: $ALMOST_WHITE_FONT_COLOR;
+  border-radius: 50%;
+}
+
+.brightestColor {
+  border-color: $BRIGHTEST_CIRCLE_COLOR;
+}
+
+.brightColor {
+  border-color: $BRIGHT_CIRCLE_COLOR;
+}
+
+.whiteColor {
+  border-color: $WHITE_CIRCLE_COLOR;
+}
+
+.orangeColor {
+  border-color: $ORANGE_CIRCLE_COLOR;
+}
+
+.darkOrangeColor {
+  border-color: $DARK_ORANGE_CIRCLE_COLOR;
+}
+
+.xlCircle,
+.lCircle,
+.sCircle {
+  filter: blur(40px);
+}
+
+.xxxlCircle {
+  border: 125px solid;
+  filter: blur(100px);
+}
+
+.xxlCircle {
+  border: 87px solid;
+  filter: blur(60px);
+}
+
+.xlCircle {
+  border: 79px solid;
+}
+
+.lCircle {
+  border: 67px solid;
+}
+
+.mCircle {
+  border: 50px solid;
+  filter: blur(50px);
+}
+
+.sCircle {
+  border: 38px solid;
+}
+
+.xsCircle {
+  border: 30px solid;
+  filter: blur(30px);
+}
+
+.xxsCircle {
+  border: 21px solid;
+  filter: blur(13px);
+}
+
+.position1 {
+  top: 35vh;
+  right: 15vw;
+}
+
+.position2 {
+  top: 15vh;
+  right: 10vw;
+}
+
+.position3 {
+  top: 30vh;
+  left: 5vw;
+}
+
+.position4 {
+  top: 265vh;
+  right: 8vw;
+}
+
+.position5 {
+  top:280vh;
+  left: 10vw;
+}
+
+.position6 {
+  top: 275vh;
+  right: 15vw;
+}
+
+.position7 {
+  bottom: 160vh;
+  right: 8vw;
+}
+
+.position8 {
+  bottom: 75vh;
+  right: 5vw;
+}
+
+.position9 {
+  bottom: 25vh;
+  left: 50vw;
+}
+
+.position10 {
+  bottom: 22vh;
+  left: 43vw;
+}

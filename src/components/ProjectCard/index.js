@@ -34,7 +34,7 @@ const ProjectCard = ({project, onClick}) => {
             : 'soon'}
         </span>
       </div>
-      <button onClick={onClick} className={`${styles.stakeButton} stake-button-view`}>stake now</button>
+      <button onClick={() => onClick(project)} className={`${styles.stakeButton} stake-button-view`}>stake now</button>
     </div>
   );
 };

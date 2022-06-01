@@ -1,10 +1,39 @@
+import {useEffect, useState} from 'react';
+import {isBrowser} from '../../utils';
+
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
-import styles from '../../styles/Components/Layout.module.scss';
-import {useEffect, useState} from 'react';
-import {isBrowser} from '../../utils';
 import ScrollToTop from '../ScrollToTop';
+import Circle from '../Circle';
+import styles from '../../styles/Components/Layout.module.scss';
+import {
+  brightestCircleColor,
+  whiteCircleColor,
+  orangeCircleColor,
+  darkOrangeCircleColor,
+  brightCircleColor
+} from '../../styles/variables.module.scss';
+import {
+  xxxlCircle,
+  xxlCircle,
+  xlCircle,
+  lCircle,
+  mCircle,
+  sCircle,
+  xsCircle,
+  xxsCircle,
+  position1,
+  position2,
+  position3,
+  position4,
+  position5,
+  position6,
+  position7,
+  position8,
+  position9,
+  position10,
+} from '../../styles/Components/Circle.module.scss';
 
 const Layout = ({children}) => {
   // const [, setSize] = useState([0, 0]);
@@ -43,6 +72,18 @@ const Layout = ({children}) => {
       <Header/>
       <main className={styles.layout}>{children}</main>
       <Footer/>
+      <div className={styles.circlesWrapper}>
+        <Circle position={position1} size={xxxlCircle} color={brightestCircleColor}/>
+        <Circle position={position2} size={xxsCircle} color={whiteCircleColor}/>
+        <Circle position={position3} size={xsCircle} color={orangeCircleColor}/>
+        <Circle position={position4} size={xxlCircle} color={darkOrangeCircleColor}/>
+        <Circle position={position5} size={lCircle} color={orangeCircleColor}/>
+        <Circle position={position6} size={xlCircle} color={whiteCircleColor}/>
+        <Circle position={position7} size={xxsCircle} color={whiteCircleColor}/>
+        <Circle position={position8} size={mCircle} color={orangeCircleColor}/>
+        <Circle position={position9} size={xxxlCircle} color={brightCircleColor}/>
+        <Circle position={position10} size={sCircle} color={orangeCircleColor}/>
+      </div>
       {visible && <ScrollToTop/>}
     </>
   );

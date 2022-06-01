@@ -6,8 +6,21 @@ import Loader from '../components/Loader';
 import Contacts from '../components/Contacts';
 import Accordion from '../components/Accordion';
 import {ISS_DATA} from '../data/ISS';
+import {useState} from 'react';
+import ProjectModalWindow from '../components/Modals/ProjectModalWindow';
+import CalculatorModalWindow from '../components/Modals/CalculatorModalWindow';
 
 const Home = ({projects}) => {
+  const [isProjectModalVisible, setIsProjectModalVisible] = useState(false);
+  const [project, setProject] = useState(undefined);
+  const buttonProjectHandler = (project) => {
+    setIsProjectModalVisible(!isProjectModalVisible);
+    setProject(project);
+  };
+
+  const [isCalcVisible, setIsCalcVisible] = useState(false);
+  const calcHandler = () =>
+    setIsCalcVisible(!isCalcVisible);
 
   return (
     <div className={styles.pageWrapper}>
@@ -25,13 +38,19 @@ const Home = ({projects}) => {
         <div className={styles.projectCardWrapper}>
           {projects.length > 0
             ? projects.map(project =>
-              <ProjectCard key={project.id} project={project}/>)
-            : <Loader/>}
+              <ProjectCard
+                key={project.id}
+                project={project}
+                onClick={buttonProjectHandler}
+                isVisible={isProjectModalVisible}
+              />)
+            : <Loader/>
+          }
         </div>
       </section>
       <section className={`${styles.section} ${styles.calculatorSection}`} id="calculator">
         <SectionTitle label="Calculator" isLeft isLight/>
-        <button className={`stake-button-view ${styles.stakeButton}`}>stake now</button>
+        <button onClick={calcHandler} className={`stake-button-view ${styles.stakeButton}`}>stake now</button>
       </section>
       <section className={`${styles.section} ${styles.issSection}`} id="infrastructure-security-statement">
         <SectionTitle label="Infrastructure & Security Statement"/>
@@ -45,10 +64,20 @@ const Home = ({projects}) => {
           )}
         </div>
       </section>
-      <section className={`${styles.section} ${styles.contactSection}`} id="contact">
+      <section className={`${styles.section}`} id="contact">
         <SectionTitle label="Contacts" isLight isContact/>
         <Contacts/>
       </section>
+      {project &&
+        <ProjectModalWindow
+          onClick={buttonProjectHandler}
+          visible={isProjectModalVisible}
+          project={project}
+        />}
+      <CalculatorModalWindow
+        onClose={calcHandler}
+        visible={isCalcVisible}
+      />
     </div>
   );
 };

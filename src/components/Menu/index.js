@@ -1,10 +1,11 @@
-import {MENU_ITEMS} from '../../data/home';
+import {MENU_ITEMS} from '../../data/menu';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 import styles from '../../styles/Components/Menu.module.scss';
 
 const Menu = () => {
   const router = useRouter();
+
 
   return (
     <menu className={styles.menu}> {/*onClick={menuClickHandler} ref={menuRef}*/}
