@@ -1,0 +1,287 @@
+@import "../variables.module";
+
+@keyframes slide-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.calculator {
+  font-size: 100vw;
+  display: grid;
+  place-items: center;
+  gap: .03em;
+  grid-template-columns: 1fr;
+
+  .rowWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .toggle,
+  .inputWrapper,
+  .profitWrapper,
+  .selectWrapper,
+  .stakeButton {
+    font-size: .00857em;
+  }
+
+  .toggle,
+  .slider {
+    border-radius: 2.5em;
+  }
+
+  .input,
+  .profitWrapper,
+  .inputContainerActive::after {
+    border-radius: .833em;
+  }
+
+  .toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 14.166em;
+    background-color: $ACCENT_ORANGE_COLOR;
+    padding: 1.33em;
+    border: none;
+
+    position: relative;
+
+    .text {
+      font-weight: 500;
+      position: relative;
+      z-index: 1;
+      width: 40%;
+
+      transition: all .3s ease-in-out;
+    }
+
+    .activeText {
+      font-weight: 600;
+      color: $ALMOST_WHITE_FONT_COLOR;
+    }
+
+    .slider {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 100%;
+      width: 50%;
+      background-color: $ALTERNATIVE_BACKGROUND_COLOR;
+      z-index: 0;
+
+      animation: slide-left .4s ease forwards;
+    }
+
+    .sliderActive {
+      animation: slide-right .4s ease forwards;
+    }
+  }
+
+  .toggleCurrency {
+    border: 3px solid $ACCENT_ORANGE_COLOR;
+
+    .text {
+      text-transform: uppercase;
+    }
+
+    .text + .text {
+      font-size: 1.66em;
+      line-height: 1;
+    }
+  }
+
+  .toggleTime {
+
+    .text {
+      text-transform: capitalize;
+    }
+  }
+
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .label {
+      font-weight: 500;
+      color: $ALTERNATIVE_BACKGROUND_COLOR;
+      text-transform: uppercase;
+    }
+
+    .inputContainer {
+      position: relative;
+
+      .symbol {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        color: $ALMOST_WHITE_FONT_COLOR;
+        text-transform: uppercase;
+      }
+
+      .input {
+        -moz-appearance: textfield;
+        appearance: none;
+        width: 100%;
+        padding: 1em 2em 1em 1em;
+        color: $ALMOST_WHITE_FONT_COLOR;
+        background-color: $ALTERNATIVE_BACKGROUND_COLOR;
+        border: none;
+        position: relative;
+        font-size: 1em;
+      }
+
+      .input::-webkit-outer-spin-button,
+      .input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+
+      .inputActive {
+        outline: 2px solid $ACCENT_ORANGE_COLOR;
+      }
+    }
+  }
+
+  .profitWrapper {
+    width: 14.166em;
+    height: 4.166em;
+    background-color: $ACCENT_ORANGE_COLOR;
+    padding: .4166em 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .profitText {
+      color: $ALTERNATIVE_BACKGROUND_COLOR;
+      text-transform: uppercase;
+    }
+  }
+
+  .selectWrapper {
+    width: 14.166em;
+    position: relative;
+
+    .selectButton {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      border: none;
+      border-radius: 1.25em;
+      color: $ALMOST_WHITE_FONT_COLOR;
+      background-color: $ALTERNATIVE_BACKGROUND_COLOR;
+      font-weight: 500;
+      font-size: 1em;
+      padding: 1.33em 1.66em;
+
+      transition: all .3s ease-in-out;
+
+      .selectArrow {
+        position: relative;
+        width: 1.5em;
+        height: 1.5em;
+        border: none;
+
+        &:before, &:after {
+          content: '';
+          position: absolute;
+          top: 48%;
+          height: 3px;
+          width: 1em;
+          background-color: $BUTTON_TO_TOP_COLOR;
+          transition: all .3s ease-in-out;
+        }
+
+        &:before {
+          transform: rotate(45deg);
+          right: 37%;
+        }
+
+        &:after {
+          transform: rotate(-45deg);
+          left: 37%;
+        }
+      }
+
+      .selectArrowActive {
+        &:before {
+          transform: rotate(-45deg);
+        }
+
+        &:after {
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    .selectButtonActive {
+      border-radius: 1.25em 1.25em 0 0;
+    }
+
+    .coinList {
+      display: grid;
+      border-radius: 0 0 1.25em 1.25em;
+      overflow: auto;
+
+      position: absolute;
+      top: 100%;
+      width: 100%;
+
+      transition: all .3s ease-in-out;
+      visibility: hidden;
+      height: 0;
+      z-index: 5;
+
+      .listItem {
+        border: none;
+        background-color: $ALTERNATIVE_BACKGROUND_COLOR;
+        color: $ALMOST_WHITE_FONT_COLOR;
+        padding: .4166em 0;
+        width: 100%;
+        font-size: 1em;
+      }
+
+      .listItem + .listItem {
+        border-top: 1px solid rgba(white, .5);
+      }
+
+      .listItemActive {
+        color: $ACCENT_ORANGE_COLOR;
+      }
+    }
+
+    .coinListOpen {
+      height: 11.166em;
+      visibility: visible;
+    }
+  }
+
+  .stakeButton {
+    max-width: 8.9166em;
+    padding: .5em 1.583em;
+    text-align: center;
+  }
+}

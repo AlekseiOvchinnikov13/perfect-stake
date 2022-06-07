@@ -34,7 +34,6 @@ export const COINS_DATA = [
   {
     id: 'stargaze',
     description: 'Stargaze is a decentralized and community-owned network for NFTs. It is built as an app-specific Cosmos Proof-of_stake chain, running the Tendermint consensus engine. It’s goal is to be similar to OpenSea, except governed by a community via a curation DAO and a protocol DAO.',
-    apy: '',
     fee: '5%',
     link: 'https://www.mintscan.io/stargaze/validators/starsvaloper1g5ggp7zqq6mec2fdz84q8pv6ykrf0lgtrc8w5q',
     address: 'starsvaloper1g5ggp7zqq6mec2fdz84q8pv6ykrf0lgtrc8w5q'
@@ -42,7 +41,6 @@ export const COINS_DATA = [
   {
     id: 'the-graph',
     description: 'The Graph is an indexing protocol for querying data for networks like Ethereum and IPFS, powering many applications in both DeFi and the broader Web3 ecosystem. Anyone can build and publish open APIs, called subgraphs, that applications can query using GraphQL to retrieve blockchain data.',
-    apy: '0%',
     fee: 'private mode',
     link: 'https://graphscan.io/profile?id=0xc36157756ea4838cf882edab9dd94325c38f2edc#indexer-details',
     address: '0xc36157756ea4838cf882edab9dd94325c38f2edc'
@@ -66,7 +64,6 @@ export const COINS_DATA = [
   {
     id: 'certik',
     description: 'Shentu Chain, a security-first, delegated proof-of-stake blockchain, for trustworthy execution of mission-critical applications, including DeFi, NFTs, and autonomous vehicles. Shentu Chain prioritizes cross-chain compatibility, built as a Cosmos Hub with full EVM and Hyperledger Burrow compatibility, as well as compatibility with eWASM and Ant Financial’s AntChain.',
-    apy: '',
     fee: '20%',
     link: 'https://www.mintscan.io/certik/validators/certikvaloper1rlwftpht32qvwcra6my36azth26sa7gd6f5nuc',
     address: 'certikvaloper1rlwftpht32qvwcra6my36azth26sa7gd6f5nuc'
@@ -74,7 +71,6 @@ export const COINS_DATA = [
   {
     id: 'bitsong',
     description: 'BitSong is a distributed (open source) blockchain music ecosystem born in December 2017, to create a decentralized and trustless hub that interconnects the various market players. BitSong is not a streaming platform but a real decentralized ecosystem of services and an active community of artists, music providers and fans (listeners) that aims to become the only point of reference within the digital music market.',
-    apy: '',
     fee: '10%',
     link: 'https://www.mintscan.io/bitsong/validators/bitsongvaloper1rtxprc6emy5jnqm88ssf0agernku83s2rg5tm7',
     address: 'bitsongvaloper1rtxprc6emy5jnqm88ssf0agernku83s2rg5tm7'
@@ -83,7 +79,6 @@ export const COINS_DATA = [
     id: 'kusama',
     description: 'Self-described as "Polkadot\'s wild cousin," Kusama is an experimental blockchain platform that is designed to provide a massively interoperable and scalable framework for developers. Kusama is built on Substrate — a blockchain building kit developed by Parity Technologies. Kusama has almost the same codebase as Polkadot — one of the most successful interoperable blockchains.',
     apy: '14.21%',
-    fee: '',
     link: 'https://kusama.subscan.io/account/Dwq62USrcGMwZpJ4uNXR3Q6EMWxuyiwa91gYNN6Ekp9RMN6?tab=extrinsic',
     address: 'Dwq62USrcGMwZpJ4uNXR3Q6EMWxuyiwa91gYNN6Ekp9RMN6'
   },
@@ -98,7 +93,6 @@ export const COINS_DATA = [
   {
     id: 'clover-finance',
     description: 'Clover Finance (CLV), or simply Clover, is a blockchain operating system. It provides a one-stop, easy‑to‑use blockchain infrastructure and an ethereum virtual machine (EVM) compatible framework for Substrate‑based applications. Clover Finance, another offspring of the Substrate-based Polkadot parachain aims at bridging the compatibility gap when building and operating across blockchains.',
-    apy: '',
     fee: '5%',
     link: 'https://apps-ivy.clover.finance/#/staking/query/5DjjdTMkfjPX8gtErKW1ozTiDhY5y9BksTa9aatvrtzV3tQx',
     address: '5DjjdTMkfjPX8gtErKW1ozTiDhY5y9BksTa9aatvrtzV3tQx'

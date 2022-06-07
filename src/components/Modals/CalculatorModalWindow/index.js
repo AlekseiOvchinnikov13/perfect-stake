@@ -1,6 +1,6 @@
 import ModalWindow from '../ModalWindow';
+import Calculator from '../../Calculator';
 import styles from '../../../styles/Components/ModalWindow.module.scss';
-import Toggle from '../../Calculator/Toggle';
 
 const CalculatorModalWindow = ({onClick, visible}) => {
 
@@ -12,7 +12,7 @@ const CalculatorModalWindow = ({onClick, visible}) => {
       className={styles.calculatorModalWindow}
       isCalc
     >
-      <Toggle/>
+      <Calculator/>
     </ModalWindow>
   );
 };

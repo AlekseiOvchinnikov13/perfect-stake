@@ -45,6 +45,7 @@ ul, li {
 
 a, button {
   cursor: pointer;
+  font-family: $FONT_FAMILY_JOST;
 }
 
 .container {
@@ -55,10 +56,9 @@ a, button {
   border-radius: 20px;
   background: $LIGHT_BACKGROUND_GRADIENT;
   text-transform: capitalize;
-  font-family: $FONT_FAMILY_JOST;
   font-weight: 700;
   color: $ALMOST_WHITE_FONT_COLOR;
-  border: none;
+  border: 1px solid transparent;
 
   transition: all .3s ease-in-out;
 
