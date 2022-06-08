@@ -1,15 +1,18 @@
-import styles from '../../styles/Components/Accordion.module.scss';
 import {useState} from 'react';
 import Link from 'next/link';
+import styles from '../../styles/Components/Accordion.module.scss';
 
-const Accordion = ({data: {title, content, href}, isHome}) => {
-  const [isActive, setIsActive] = useState(false);
-
+const Accordion = ({data: {title, content, href}, isHome, isOpen}) => {
+  const [isActive, setIsActive] = useState(isOpen || false);
   const arrowHandler = () => setIsActive(!isActive);
 
   return (
-    <div className={styles.accordionItem}>
+    <div
+      className={`${styles.accordionItem} ${isHome ? styles.accordionItemHome : ''}`}
+      id={href}
+    >
       <div className={styles.accordionTitle}>
+        {!isHome && <div/>}
         <p className={styles.text}>
           {title}
         </p>
@@ -25,7 +28,7 @@ const Accordion = ({data: {title, content, href}, isHome}) => {
         }}
       />
       {isHome && isActive &&
-        <Link href={`/iss#${href}`}>
+        <Link href={`/infrastructure-security-statement#${href}`}>
           <a className={styles.learnMore}>
             learn more
           </a>

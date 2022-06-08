@@ -1,5 +1,5 @@
-import styles from '../../../styles/Components/Calculator.module.scss';
 import {useState} from 'react';
+import styles from '../../../styles/Components/Calculator.module.scss';
 
 const Toggle = ({isCurrency, onClick}) => {
   const [isActive, setIsActive] = useState(true);

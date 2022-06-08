@@ -4,8 +4,8 @@ import Toggle from './Toggle';
 import Input from './Input';
 import Profit from './Profit';
 import Select from './Select';
-import styles from '../../styles/Components/Calculator.module.scss';
 import {COINS_DATA} from '../../data/coins';
+import styles from '../../styles/Components/Calculator.module.scss';
 
 const Calculator = () => {
   const coins = useContext(CoinsContext);

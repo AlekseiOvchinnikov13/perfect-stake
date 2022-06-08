@@ -1,5 +1,5 @@
-import styles from '../../styles/Components/ScrollToTop.module.scss';
 import {isBrowser} from '../../utils';
+import styles from '../../styles/Components/ScrollToTop.module.scss';
 
 const ScrollToTop = () => {
   const buttonHandler = () => {

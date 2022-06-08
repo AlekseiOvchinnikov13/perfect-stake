@@ -6,7 +6,6 @@ import styles from '../../styles/Components/Menu.module.scss';
 const Menu = () => {
   const router = useRouter();
 
-
   return (
     <menu className={styles.menu}> {/*onClick={menuClickHandler} ref={menuRef}*/}
       <ul className={styles.menuList}>

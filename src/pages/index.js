@@ -1,4 +1,4 @@
-import styles from '../styles/Pages/Home.module.scss';
+import {useState} from 'react';
 import SectionTitle from '../components/SectionTitle';
 import {getCoinsMarkets} from './api/api';
 import ProjectCard from '../components/ProjectCard';
@@ -6,10 +6,10 @@ import Loader from '../components/Loader';
 import Contacts from '../components/Contacts';
 import Accordion from '../components/Accordion';
 import {ISS_DATA} from '../data/ISS';
-import {useState} from 'react';
 import ProjectModalWindow from '../components/Modals/ProjectModalWindow';
 import CalculatorModalWindow from '../components/Modals/CalculatorModalWindow';
 import {CoinsContext} from '../context/CoinsContext';
+import styles from '../styles/Pages/Home.module.scss';
 
 const Home = ({projects}) => {
   const [isProjectModalVisible, setIsProjectModalVisible] = useState(false);
