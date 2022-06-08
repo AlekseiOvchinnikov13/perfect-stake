@@ -1,8 +1,9 @@
 import SectionTitle from '../components/SectionTitle';
-import styles from '../styles/Pages/InfrastructureSecurityStatement.module.scss';
 import Accordion from '../components/Accordion';
 import {ISS_DATA} from '../data/ISS';
 import {useRouter} from 'next/router';
+import Contacts from '../components/Contacts';
+import styles from '../styles/Pages/InfrastructureSecurityStatement.module.scss';
 
 const InfrastructureSecurityStatement = () => {
   const router = useRouter();
@@ -22,6 +23,11 @@ const InfrastructureSecurityStatement = () => {
           />
         )}
       </div>
+      <SectionTitle
+        isContact
+        label="Contacts"
+      />
+      <Contacts/>
     </div>
   );
 };
