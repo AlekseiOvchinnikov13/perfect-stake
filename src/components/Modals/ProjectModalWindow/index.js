@@ -6,7 +6,7 @@ import {COINS_DATA} from '../../../data/coins';
 import styles from '../../../styles/Components/ProjectModalWindow.module.scss';
 
 const ProjectModalWindow = ({onClick, visible, project: {id, image, current_price, name}}) => {
-  const {description, address, fee, link} = COINS_DATA.find(item => item.id === id);
+  const {description, address, fee = 'soon', link} = COINS_DATA.find(item => item.id === id);
 
   const copyToClipBoard = () => {
     navigator.clipboard.writeText(address)
