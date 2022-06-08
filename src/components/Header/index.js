@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className={classes}>
       <div className={styles.gradient}/>
-      <Logo/>
+      <Logo className={styles.logo}/>
       <Menu/>
     </header>
   );

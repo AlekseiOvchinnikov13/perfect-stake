@@ -7,6 +7,17 @@
   justify-content: space-between;
   align-items: center;
 
+  .logo {
+    width: .08857em;
+    height: .05em;
+    position: relative;
+    z-index: 99;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .gradient {
     position: absolute;
     top: 0;
@@ -16,4 +27,8 @@
     height: .28em;
     background: linear-gradient(180deg, $SECONDARY_BACKGROUND_GRADIENT_COLOR 42.36%, $PRIMARY_BACKGROUND_COLOR 98.31%);
   }
+}
+
+@media (max-width: 450px) {
+
 }

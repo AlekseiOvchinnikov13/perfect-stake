@@ -17,7 +17,7 @@
     right: -2.34em;
     width: 40%;
     height: .875em;
-    border-radius: 10px 0 0 10px;
+    border-radius: .25em 0 0 .25em;
   }
 }
 
@@ -28,7 +28,7 @@
   &:before {
     left: -2.34em;
     width: 30%;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 .25em .25em 0;
   }
 }
 
@@ -50,5 +50,14 @@
   &:before {
     width: 27%;
     background: $CONTACT_LIGHT_BACKGROUND_GRADIENT;
+  }
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: .039em;
+  }
+  .title:before {
+    width: 50%;
   }
 }

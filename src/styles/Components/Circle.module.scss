@@ -118,3 +118,17 @@
   bottom: 22vh;
   left: 43vw;
 }
+
+@media (max-width: 1024px) {
+  .position4 {
+    top: 165vh;
+  }
+
+  .position5 {
+    top:180vh;
+  }
+
+  .position6 {
+    top: 175vh;
+  }
+}

@@ -2,10 +2,18 @@ import LogoSvg from './images/logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Logo = () => (
-  <Link href="/#home">
-    <a className="logo" style={{fontSize: '.05em'}}>
-      <Image src={LogoSvg} alt="logo"/>
+const Logo = ({className}) => (
+
+  <Link  href="/">
+    <a>
+      <div className={className}>
+        <Image
+          src={LogoSvg}
+          alt="logo"
+          layout="fill"
+          objectFit="contain"
+        />
+      </div>
     </a>
   </Link>
 );

@@ -19,7 +19,7 @@
       height: 8.3em;
 
       background-color: $LIGHT_BACKGROUND_COLOR;
-      border-radius: 27px;
+      border-radius: 1.5em;
     }
   }
 
@@ -38,6 +38,7 @@
       padding-top: .05em;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(.1778em, 1fr));
+      place-items: center;
       gap: .035em;
     }
   }
@@ -47,7 +48,7 @@
       font-size: .0185em;
       width: 9.6em;
       height: 2.3em;
-      border-radius: 30px;
+      border-radius: 1.1538em;
 
       display: flex;
       align-items: center;
@@ -60,5 +61,25 @@
     .accordionWrapper {
       padding: 0 .065em;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .pageWrapper .description {
+    font-size: .017578em;
+    max-width: 70vw;
+    margin: 0 0 0 auto;
+  }
+  .pageWrapper .description:before {
+    right: auto;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: -5%;
+    height: 10em;
+    border-radius: 1.5em;
+  }
+  .pageWrapper .projectSection .projectCardWrapper {
+    //grid-template-columns: repeat(auto-fill, minmax(.16em, 1fr));
+    gap: .068359em;
   }
 }

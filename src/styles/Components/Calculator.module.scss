@@ -285,3 +285,16 @@
     text-align: center;
   }
 }
+
+@media (max-width: 1024px) {
+  .calculator {
+    gap: .04em;
+  }
+  .calculator .toggle,
+  .calculator .inputWrapper,
+  .calculator .profitWrapper,
+  .calculator .selectWrapper,
+  .calculator .stakeButton {
+    font-size: .01171875em;
+  }
+}

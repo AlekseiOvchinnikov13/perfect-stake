@@ -32,3 +32,9 @@
     margin-top: .0178em;
   }
 }
+
+@media (max-width: 1024px) {
+  .contactsWrapper .contactRow .text {
+    font-size: .017578em;
+  }
+}

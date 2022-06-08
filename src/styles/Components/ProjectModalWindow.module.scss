@@ -38,7 +38,6 @@
     font-size: .00714em;
   }
 
-
   .projectTitle {
     padding: .83em 0 1.66em;
   }
@@ -75,7 +74,7 @@
       max-width: 29.166em;
       background-color: $PRIMARY_BACKGROUND_COLOR;
       padding: .5em 2em;
-      border-radius: 10px;
+      border-radius: .8333em;
       text-overflow: ellipsis;
       overflow: hidden;
     }
@@ -84,15 +83,38 @@
       font-size: .01428em;
       line-height: 1;
       background: $LIGHT_BACKGROUND_GRADIENT;
-      border-radius: 5px;
+      border-radius: .25em;
       border: none;
       padding: .25em .3em;
     }
   }
 
   .stakeButton {
-    border-radius: 11px;
+    border-radius: .9166em;
     font-size: .008571em;
     padding: .5em 1.5em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projectModalWrapper .imageWrapper {
+    width: .0683em;
+    height: .0683em;
+  }
+  .projectModalWrapper .projectTitle,
+  .projectModalWrapper .projectPriceTitle,
+  .projectModalWrapper .addressText,
+  .projectModalWrapper .stakeButton {
+    font-size: .0117em;
+  }
+  .projectModalWrapper .projectDescription,
+  .projectModalWrapper .projectFee {
+    font-size: .00976em;
+  }
+  .projectModalWrapper .projectPrice {
+    font-size: .02148em;
+  }
+  .projectModalWrapper .addressWrapper .addressBtn {
+    font-size: .0195em;
   }
 }

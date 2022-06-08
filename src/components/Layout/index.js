@@ -1,6 +1,6 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useLayoutEffect, useState} from 'react';
 import {isBrowser} from '../../utils';
-
+import {useRouter} from 'next/router';
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
@@ -30,27 +30,26 @@ import {
   position9,
   position10,
 } from '../../styles/Components/Circle.module.scss';
-import {useRouter} from 'next/router';
 
 const Layout = ({children}) => {
-  // const [, setSize] = useState([0, 0]);
-  // const updateSize = () => isBrowser && setSize([window.innerWidth, window.innerHeight]);
+  const [, setSize] = useState([0, 0]);
+  const updateSize = () => isBrowser() && setSize([window.innerWidth, window.innerHeight]);
 
-  /*useLayoutEffect(() => {
-    isBrowser && window.addEventListener('resize', updateSize);
+  useLayoutEffect(() => {
+    isBrowser() && window.addEventListener('resize', updateSize);
     updateSize();
-    return () => isBrowser && window.removeEventListener('resize', updateSize);
-  }, []);*/
+    return () => isBrowser() && window.removeEventListener('resize', updateSize);
+  }, []);
 
   const [visible, setVisible] = useState(false);
-  const onScroll = () => isBrowser && setVisible(window.scrollY > 0);
+  const onScroll = () => isBrowser() && setVisible(window.scrollY > 0);
 
   const router = useRouter();
   const isHomePage = router.pathname === '/';
 
   useEffect(() => {
-    isBrowser && document.addEventListener('scroll', onScroll);
-    return () => isBrowser && document.removeEventListener('scroll', onScroll);
+    isBrowser() && document.addEventListener('scroll', onScroll);
+    return () => isBrowser() && document.removeEventListener('scroll', onScroll);
   }, []);
 
   return (<>

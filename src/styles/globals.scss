@@ -25,7 +25,7 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   font-family: $FONT_FAMILY_JOST;
-  font-size: 100vw;
+  font-size: max(100vw, 450px);
   background-color: $PRIMARY_BACKGROUND_COLOR;
 }
 

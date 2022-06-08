@@ -5,7 +5,7 @@
   height: .25em;
 
   background-color: $LIGHT_BACKGROUND_COLOR;
-  border-radius: 30px;
+  border-radius: .021428em;
   padding: .035em .025em;
 
   display: flex;
@@ -40,7 +40,7 @@
       text-transform: uppercase;
       font-size: .0128em;
       background-color: $GREY_BACKGROUND_COLOR;
-      border-radius: 24px;
+      border-radius: 1.333em;
 
       display: flex;
       align-items: center;
@@ -74,5 +74,28 @@
     font-size: .01em;
     height: 2.5em;
     width: 7.92em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projectCard {
+    width: .24414em;
+    height: .31738em;
+  }
+  .projectCard .projectHeader .projectImgWrapper {
+    width: .0546875em;
+    height: .0546875em;
+  }
+  .projectCard .projectHeader .projectTitle {
+    font-size: .017578em;
+  }
+  .projectCard .apyWrapper .apyText {
+    font-size: .011718em;
+  }
+  .projectCard .apyWrapper .apyNumber {
+    font-size: .023437em;
+  }
+  .projectCard .stakeButton {
+    font-size: .013671875em;
   }
 }

@@ -52,7 +52,7 @@
     margin: 0 20px;
 
     background-color: $ALMOST_WHITE_FONT_COLOR;
-    border-radius: 10px;
+    border-radius: .0071em;
     animation-name: slide-in;
     animation-duration: 0.5s;
 
@@ -112,5 +112,16 @@
         font-size: .01214em;
       }
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .modal .modalDialog {
+    max-width: .4882em;
+    max-height: .47em;
+  }
+  .calculatorModalWindow .modalDialog {
+    max-width: .5859em;
+    max-height: .5em;
   }
 }

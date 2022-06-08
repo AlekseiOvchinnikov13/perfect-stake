@@ -3,7 +3,7 @@ import styles from '../../styles/Components/ScrollToTop.module.scss';
 
 const ScrollToTop = () => {
   const buttonHandler = () => {
-    isBrowser && window.scrollTo({
+    isBrowser() && window.scrollTo({
       top: 0,
       left: 0,
       behavior: 'smooth'
