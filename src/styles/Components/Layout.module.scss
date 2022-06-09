@@ -14,3 +14,9 @@
   height: 100%;
   z-index: -5;
 }
+
+@media (max-width: 450px) {
+  .layout {
+    padding: .065em;
+  }
+}

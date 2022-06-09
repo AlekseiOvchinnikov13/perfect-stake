@@ -8,7 +8,7 @@ const Accordion = ({data: {title, content, href}, isHome, isOpen}) => {
 
   return (
     <div
-      className={`${styles.accordionItem} ${isHome ? styles.accordionItemHome : ''}`}
+      className={`${styles.accordionItem} ${isHome ? styles.accordionItemHome : ''} ${isActive ? styles.accordionItemActive : ''}`}
       id={href}
     >
       <div className={styles.accordionTitle}>
@@ -18,11 +18,11 @@ const Accordion = ({data: {title, content, href}, isHome, isOpen}) => {
         </p>
         <button
           onClick={arrowHandler}
-          className={`${styles.arrow} ${isActive ? styles.arrowActive : ''}`}
+          className={styles.arrow}
         />
       </div>
       <div
-        className={`${styles.accordionContent} ${isActive ? styles.accordionContentActive : ''} ${isHome ? styles.accordionContentHome : ''}`}
+        className={styles.accordionContent}
         dangerouslySetInnerHTML={{
           __html: `${content}`
         }}

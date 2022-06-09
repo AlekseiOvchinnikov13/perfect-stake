@@ -79,7 +79,23 @@
     border-radius: 1.5em;
   }
   .pageWrapper .projectSection .projectCardWrapper {
-    //grid-template-columns: repeat(auto-fill, minmax(.16em, 1fr));
     gap: .068359em;
+  }
+}
+
+@media (max-width: 450px) {
+  .pageWrapper .description {
+    font-size: 8px;
+    max-width: 80vw;
+  }
+  .pageWrapper .projectSection .projectCardWrapper {
+    row-gap: .0555em;
+    column-gap: .133em;
+  }
+  .pageWrapper .calculatorSection .stakeButton {
+    font-size: .02222em;
+  }
+  .pageWrapper .issSection .accordionWrapper {
+    padding: 0;
   }
 }

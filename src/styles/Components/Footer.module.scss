@@ -20,3 +20,10 @@
     background: linear-gradient(180deg, $PRIMARY_BACKGROUND_COLOR 30.98%, $SECONDARY_BACKGROUND_GRADIENT_COLOR 87%);
   }
 }
+
+@media (max-width: 450px) {
+  .footer p {
+    font-size: .02444em;
+    text-align: center;
+  }
+}

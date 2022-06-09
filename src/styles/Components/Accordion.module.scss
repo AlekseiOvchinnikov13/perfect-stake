@@ -1,12 +1,5 @@
 @import '../variables.module';
 
-.accordionItemHome {
-  .accordionTitle {
-    background: $ACCORDION_BACKGROUND_COLOR;
-    border-radius: .01em;
-  }
-}
-
 .accordionItem {
   margin-top: .0357em;
   overflow: hidden;
@@ -21,6 +14,7 @@
     .text {
       font-size: .017em;
       color: $ALMOST_WHITE_FONT_COLOR;
+      text-transform: uppercase;
     }
 
     .arrow {
@@ -51,16 +45,6 @@
         left: 45%;
       }
     }
-
-    .arrowActive {
-      &:before {
-        transform: rotate(-45deg);
-      }
-
-      &:after {
-        transform: rotate(45deg);
-      }
-    }
   }
 
   .accordionContent {
@@ -70,20 +54,6 @@
     height: 0;
     color: transparent;
     transition: all .3s ease-out;
-  }
-
-  .accordionContentActive {
-    padding: 1.25em .3em 0;
-    visibility: unset;
-    height: unset;
-    color: $ALMOST_WHITE_FONT_COLOR;
-  }
-
-  .accordionContentHome {
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   .learnMore {
@@ -104,6 +74,41 @@
   }
 }
 
+.accordionItemHome {
+  .accordionTitle {
+    background: $ACCORDION_BACKGROUND_COLOR;
+    border-radius: .01em;
+  }
+
+  .accordionContent {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.accordionItemActive {
+  .accordionTitle {
+    .arrow {
+      &:before {
+        transform: rotate(-45deg);
+      }
+
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .accordionContent {
+    padding: 1.25em .3em 0;
+    visibility: unset;
+    height: unset;
+    color: $ALMOST_WHITE_FONT_COLOR;
+  }
+}
+
 @media (max-width: 1024px) {
   .accordionItem .accordionTitle {
     padding: .0195em .04882em;
@@ -119,5 +124,39 @@
   }
   .accordionItem .learnMore {
     font-size: .02148em;
+  }
+}
+
+@media (max-width: 450px) {
+  .accordionItem .accordionTitle {
+    border-radius: .02222em;
+  }
+  .accordionItem .accordionTitle .text {
+    font-size: .017777em;
+    font-weight: 600;
+  }
+  .accordionItemActive .accordionTitle .text{
+    color: $ACCENT_ORANGE_COLOR;
+  }
+  .accordionItem .accordionTitle {
+    padding: .0333em .0444em;
+  }
+  .accordionItem .accordionTitle .arrow {
+    width: 2em;
+    height: 1em;
+
+    &:before, &:after {
+      height: 2px;
+      width: 9px;
+    }
+  }
+  .accordionItem .accordionContent,
+  .accordionItem .learnMore {
+    font-size: .02222em;
+  }
+  .accordionItem {
+    .accordionTitle {
+      background: $ACCORDION_BACKGROUND_COLOR;
+    }
   }
 }

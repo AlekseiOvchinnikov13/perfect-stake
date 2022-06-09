@@ -106,6 +106,7 @@
 
   .burger {
     justify-content: center;
+
     .topStick {
       transform: rotate(-225deg);
       margin-bottom: -2px;
@@ -119,5 +120,16 @@
       transform: rotate(225deg);
       margin-top: -2px;
     }
+  }
+}
+
+@media (max-width: 450px) {
+  .menuMobile .burger {
+    width: 1.5625em;
+    height: 1.2em;
+  }
+  .menuMobileOpen .menuList {
+    padding-top: 15em;
+    height: 35vh;
   }
 }

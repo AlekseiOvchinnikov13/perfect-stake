@@ -38,3 +38,9 @@
     font-size: .017578em;
   }
 }
+
+@media (max-width: 450px) {
+  .contactsWrapper .contactRow .text {
+    font-size: .02666em;
+  }
+}

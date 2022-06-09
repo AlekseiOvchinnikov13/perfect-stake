@@ -118,3 +118,39 @@
     font-size: .0195em;
   }
 }
+
+@media (max-width: 450px) {
+  .projectModalWrapper .imageWrapper {
+    width: .11111em;
+    height: .11111em;
+  }
+  .projectModalWrapper .projectTitle,
+  .projectModalWrapper .projectPriceTitle,
+  .projectModalWrapper .addressText,
+  .projectModalWrapper .projectDescription,
+  .projectModalWrapper .projectFee {
+    font-size: .01777em;
+  }
+  .projectModalWrapper .projectTitle {
+    font-weight: 800;
+  }
+  .projectModalWrapper .addressWrapper {
+    margin-bottom: .03333em;
+  }
+  .projectModalWrapper .stakeButton,
+  .projectModalWrapper .addressWrapper .addressBtn {
+    font-size: .02222em;
+  }
+  .projectModalWrapper .addressWrapper .addressBtn {
+    padding: .5em .7em;
+  }
+  .projectModalWrapper .projectPrice {
+    font-size: .02666em;
+  }
+  .projectModalWrapper .addressWrapper .addressText {
+    border-radius: 2.5em;
+  }
+  .projectModalWrapper .stakeButton {
+    border-radius: 2em;
+  }
+}

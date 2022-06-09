@@ -61,3 +61,13 @@
     width: 50%;
   }
 }
+
+@media (max-width: 450px) {
+  .title {
+    font-size: .0311em;
+    font-weight: 600;
+  }
+  .title:before {
+    width: 40%;
+  }
+}

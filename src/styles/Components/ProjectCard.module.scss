@@ -99,3 +99,26 @@
     font-size: .013671875em;
   }
 }
+
+@media (max-width: 450px) {
+  .projectCard {
+    width: 120px;
+    height: 160px;
+  }
+  .projectCard .projectHeader .projectImgWrapper {
+    width: .08888em;
+    height: .08888em;
+  }
+  .projectCard .projectHeader .projectTitle {
+    font-size: .02em;
+  }
+  .projectCard .apyWrapper .apyText {
+    font-size: .01777em;
+  }
+  .projectCard .apyWrapper .apyNumber {
+    font-size: .02666em;
+  }
+  .projectCard .stakeButton {
+    font-size: .01777em;
+  }
+}

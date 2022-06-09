@@ -298,3 +298,29 @@
     font-size: .01171875em;
   }
 }
+
+@media (max-width: 450px) {
+  .calculator {
+    font-size: max(100vw, 450px);
+  }
+  .calculator .toggle,
+  .calculator .inputWrapper,
+  .calculator .profitWrapper,
+  .calculator .selectWrapper {
+    font-size: .017777em;
+  }
+  .calculator .stakeButton{
+    font-size: .02222em;
+  }
+  .calculator .selectWrapper .selectButton .selectArrow {
+    &:before, &:after {
+      height: 2px;
+    }
+  }
+  .calculator .toggleCurrency {
+    border: 2px solid #EF8446;
+  }
+  .calculator .inputWrapper .inputContainer .inputActive {
+    outline: 1px solid #EF8446;
+  }
+}

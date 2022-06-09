@@ -44,3 +44,18 @@
     left: 45%;
   }
 }
+
+@media (max-width: 450px) {
+  .circleToTop {
+    right: 2.4em;
+    bottom: 3em;
+    border: 1px solid $BUTTON_TO_TOP_COLOR;
+    width: 2.2em;
+    height: 2.2em;
+
+    &:before, &:after {
+      height: 1px;
+      width: 9px;
+    }
+  }
+}

@@ -125,3 +125,28 @@
     max-height: .5em;
   }
 }
+
+@media (max-width: 450px) {
+  .modal .modalDialog {
+    max-width: 80vw;
+    max-height: unset;
+    height: unset;
+  }
+  .modal .modalDialog .modalHeader .modalClose {
+    font-size: .02666em;
+  }
+  .modal .modalDialog {
+    border-radius: .03777em;
+  }
+  .modal .modalDialog .modalBody {
+    padding: .03em .04em;
+  }
+  .calculatorModalWindow .modalDialog {
+    border-radius: .01333em;
+    max-width: 90vw;
+  }
+  .calculatorModalWindow .modalDialog .modalHeader .modalTitle {
+    font-weight: 800;
+    font-size: .015555em;
+  }
+}
