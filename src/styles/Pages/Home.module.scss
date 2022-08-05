@@ -5,7 +5,7 @@
     text-transform: uppercase;
     color: $ALMOST_WHITE_FONT_COLOR;
     font-size: .0128em;
-    max-width: 50vw;
+    max-width: 75vw;
     margin: 0 auto;
     position: relative;
 
@@ -18,7 +18,7 @@
       width: 23.5em;
       height: 8.3em;
 
-      background-color: $LIGHT_BACKGROUND_COLOR;
+      background-color: rgba(246, 248, 253, 0.1);
       border-radius: 1.5em;
     }
   }
