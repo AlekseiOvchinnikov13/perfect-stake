@@ -75,13 +75,13 @@ export const COINS_DATA = [
     link: 'https://www.mintscan.io/bitsong/validators/bitsongvaloper1rtxprc6emy5jnqm88ssf0agernku83s2rg5tm7',
     address: 'bitsongvaloper1rtxprc6emy5jnqm88ssf0agernku83s2rg5tm7'
   },
-  {
+  /*{
     id: 'kusama',
     description: 'Self-described as "Polkadot\'s wild cousin," Kusama is an experimental blockchain platform that is designed to provide a massively interoperable and scalable framework for developers. Kusama is built on Substrate — a blockchain building kit developed by Parity Technologies. Kusama has almost the same codebase as Polkadot — one of the most successful interoperable blockchains.',
     apy: '14.21%',
     link: 'https://kusama.subscan.io/account/Dwq62USrcGMwZpJ4uNXR3Q6EMWxuyiwa91gYNN6Ekp9RMN6?tab=extrinsic',
     address: 'Dwq62USrcGMwZpJ4uNXR3Q6EMWxuyiwa91gYNN6Ekp9RMN6'
-  },
+  },*/
   {
     id: 'dock',
     description: 'Dock is a platform designed to provide a simple solution for businesses and developers to build, manage and present digital credentials that are instantly verifiable using blockchain technology. With a standalone blockchain and integrated payment and incentivisation token, a trusted network of validators, and seamless adoption and interoperability.',
