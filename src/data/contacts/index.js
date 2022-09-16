@@ -2,6 +2,7 @@ import MailIcon from './images/mail-icon.svg';
 import TelegramIcon from './images/telegram-icon.svg';
 import TwitterIcon from './images/twitter-icon.svg';
 import GithubIcon from './images/github-icon.svg';
+import KeybaseIcon from './images/keybase-icon.png';
 
 export const CONTACTS_DATA = [
   {
@@ -24,4 +25,9 @@ export const CONTACTS_DATA = [
     link: 'https://github.com/perfectstake',
     img: GithubIcon
   },
+  {
+    label: 'keybase.io/perfectstake',
+    link: 'https://keybase.io/perfectstake',
+    img: KeybaseIcon
+  }
 ];
