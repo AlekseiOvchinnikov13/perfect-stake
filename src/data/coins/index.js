@@ -11,8 +11,8 @@ export const COINS_DATA = [
     id: 'matic-network',
     description: 'Polygon (previously Matic Network) is the first well-structured, easy-to-use platform for Ethereum scaling and infrastructure development. Its core component is Polygon SDK, a modular, flexible framework that supports building multiple types of applications.',
     apy: '19.69%',
-    fee: '5%',
-    link: 'https://wallet.polygon.technology/staking/validators/125',
+    fee: '1%',
+    link: 'https://staking.polygon.technology/validators/125',
     address: '0x6b8a581902478d73d8617dc0fd4a0f8180224dfc'
   },
   {
