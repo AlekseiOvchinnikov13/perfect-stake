@@ -38,13 +38,13 @@ export const COINS_DATA = [
     link: 'https://www.mintscan.io/stargaze/validators/starsvaloper1g5ggp7zqq6mec2fdz84q8pv6ykrf0lgtrc8w5q',
     address: 'starsvaloper1g5ggp7zqq6mec2fdz84q8pv6ykrf0lgtrc8w5q'
   },
-  {
+  /*{
     id: 'the-graph',
     description: 'The Graph is an indexing protocol for querying data for networks like Ethereum and IPFS, powering many applications in both DeFi and the broader Web3 ecosystem. Anyone can build and publish open APIs, called subgraphs, that applications can query using GraphQL to retrieve blockchain data.',
     fee: 'private mode',
     link: 'https://graphscan.io/profile?id=0xc36157756ea4838cf882edab9dd94325c38f2edc#indexer-details',
     address: '0xc36157756ea4838cf882edab9dd94325c38f2edc'
-  },
+  },*/
   {
     id: 'regen',
     description: 'Regen Ledger is a sovereign, proof-of-stake blockchain built on the Cosmos SDK. REGEN is a staking token, providing Regen Ledger with utility - namely, fees, gas, governance and security. REGEN token is designed to ensure utility for ecological data and climate markets. Regen Network is governed as a public blockchain by token holders.',
